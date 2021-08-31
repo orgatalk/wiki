@@ -1,0 +1,381 @@
+/* colors */
+
+:root {
+  --color-bg-light: #e8ebe4;
+  --color-bg-lighter: #f7f8f6;
+  --color-bg-lightest: white;
+  --color-dark: #363636;
+  --color-fg-light: #bbbbbb;
+  --color-fg-lighter: #dddddd;
+  --color-fg-lightest: white;
+
+  --color-accent-1: #2255dd;
+  --color-accent-2: #e4c444;
+
+  --color-button-bg: #d3d9cc;
+
+  --color-danger-border: #f85931;
+  --color-danger-bg: #fc8c72;
+  --color-danger-text: currentColor;
+  --color-info-border: #77aac4;
+  --color-info-bg: #a3c3d3;
+  --color-info-text: currentColor;
+  --color-success-border: #a3a948;
+  --color-success-bg: #c5c880;
+  --color-success-text: currentColor;
+  --color-warning-border: #edb92e;
+  --color-warning-bg: #f2d272;
+  --color-warning-text: currentColor;
+
+  --page-padding: 1rem;
+}
+
+
+/* fonts */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'),
+       local('OpenSans-Regular'),
+       url(fonts/open-sans-v15-latin-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'),
+       local('OpenSans-Bold'),
+       url(fonts/open-sans-v15-latin-700.woff2) format('woff2');
+}
+
+
+body {
+  background-color: var(--color-dark);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400 !important;
+  line-height: 1.4;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
+
+
+/* layout */
+
+.page-layout {
+  display: grid;
+  grid-template:
+    "header" auto
+    "body"   1fr
+    "footer" auto;
+  height: 100vh;
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.page-body {
+  grid-area: body;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+.container {
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+
+@media (min-width: 960px) {
+
+  .container {
+    --container-max-width: 960px;
+    max-width: var(--container-max-width);
+    width: var(--container-max-width);
+  }
+
+}
+
+
+/* links */
+
+a {
+  color: var(--color-accent-1);
+}
+
+a:not(:hover) {
+  text-decoration: none;
+}
+
+
+/* header */
+
+.page-header {
+  background-color: var(--color-dark);
+}
+
+.header {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-item {
+  align-items: center;
+  color: var(--color-accent-2);
+  display: flex;
+  margin: 0 calc(-1 * var(--page-padding));
+  padding: 0.5rem var(--page-padding);
+  text-decoration: none;
+}
+
+a.header-item:hover {
+  background-color: #4c4c4c;
+}
+
+.header-brand-icon {
+  color: var(--color-accent-2);
+  margin-right: 0.7rem;
+  margin-top: 0.1rem;
+  min-width: 3.2rem;
+  width: 3.2rem;
+}
+
+.header-brand-text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-brand-title {
+  color: var(--color-fg-lighter);
+  font-size: 1.5rem;
+  font-weight: 700 !important;
+  margin-top: 0;
+}
+
+.header-brand-subtitle {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 400 !important;
+  margin-bottom: 0.5rem;
+}
+
+
+/* main */
+
+main {
+  font-size: 0.875rem; /* 14px / 16px */
+  padding: var(--page-padding) 0 calc(var(--page-padding) * 2) 0 !important;
+}
+
+.page-body {
+  background-color: var(--color-bg-light);
+  color: var(--color-dark);
+}
+
+
+/* footer */
+
+.page-footer {
+  background-color: var(--color-dark);
+}
+
+.footer {
+  color: var(--color-fg-light);
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-slogan {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.footer-slogan {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.6rem;
+  padding-top: 0;
+}
+
+.footer-slogan-icon {
+  color: var(--color-accent-2);
+  font-size: 1.2rem;
+  margin: 0 0.1rem;
+  vertical-align: -10%;
+}
+
+.footer small {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.footer a {
+  color: var(--color-accent-2);
+}
+
+
+/* headings */
+
+h1 {
+  font-size: 1.75rem; /* 28px / 16px */
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem; /* 20px / 16px */
+  margin-top: 2rem;
+}
+
+
+/* buttons, notifications */
+
+.button {
+  background-color: var(--color-button-bg);
+}
+
+.button.color-primary {
+  background-color: var(--color-accent-2);
+  border-color: transparent;
+  color: var(--color-dark);
+}
+
+.button.color-primary:hover {
+  background-color: var(--color-accent-2);
+  border-color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+.notification {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.button.color-danger,
+.notification.color-danger {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-border);
+  color: var(--color-danger-text);
+}
+
+.button.color-info,
+.notification.color-info {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-border);
+  color: var(--color-info-text);
+}
+
+.button.color-success,
+.notification.color-success {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-border);
+  color: var(--color-success-text);
+}
+
+.button.color-warning,
+.notification.color-warning {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+.button:hover {
+  border-color: var(--color-dark);
+}
+
+
+/* tags */
+
+.tag {
+  background-color: var(--color-accent-2);
+  color: currentColor;
+  text-shadow: none;
+}
+
+.tag.color-danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  text-shadow: none;
+}
+
+.tag.color-info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+  text-shadow: none;
+}
+
+.tag.color-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  text-shadow: none;
+}
+
+.tag.color-warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+
+/* tables */
+
+table.index th {
+  font-size: 0.8125rem; /* 13px / 16px */
+  font-weight: bold;
+}
+
+table.index td {
+  font-size: 0.875rem; /* 14px / 16px */
+}
+
+table.index thead th {
+  font-weight: normal;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+
+/* print view */
+
+@media print {
+
+  * {
+    background-color: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .container {
+    max-width: none;
+    width: auto;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  .button-row {
+    display: none !important;
+  }
+
+}
