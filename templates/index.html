@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>OrgaTalk-Wiki</h1>
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
 {% endblock content %}
