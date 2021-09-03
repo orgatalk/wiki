@@ -241,6 +241,36 @@ h2 {
 }
 
 
+/* anchors in headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h1:not(:hover) .zola-anchor,
+h2:not(:hover) .zola-anchor,
+h3:not(:hover) .zola-anchor,
+h4:not(:hover) .zola-anchor,
+h5:not(:hover) .zola-anchor,
+h6:not(:hover) .zola-anchor {
+  display: none;
+}
+
+.zola-anchor {
+  left: -2.25rem;
+  padding-left: 0.5rem;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  width: 3rem;
+}
+
+
 /* buttons, notifications */
 
 .button {
