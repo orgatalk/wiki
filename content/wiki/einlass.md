@@ -1,9 +1,9 @@
 +++
 title = "Einlass"
+
+[extra]
+authors = ["Y0Gi"]
 +++
-
-<small>Autor: Y0Gi</small>
-
 
 ## Aufgaben
 
