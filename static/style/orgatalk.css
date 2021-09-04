@@ -271,6 +271,15 @@ h6:not(:hover) .zola-anchor {
 }
 
 
+/* lists */
+
+ol,
+ul {
+  margin-left: 1rem;
+  padding: 0;
+}
+
+
 /* buttons, notifications */
 
 .button {
