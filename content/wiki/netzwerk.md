@@ -2,7 +2,7 @@
 title = "Netzwerk"
 +++
 
-Das Netzwerk gehört zu einem der Kernkomponenten einer LAN-Party. Umso wichtiger ist es ein stabiles Netzwerk aufzubauen, kleine Stolperfallen zu vermeiden und auch vor Fehlern der User gefeilt zu sein. Die Anforderungen sind aber je nach Gästegröße unterschiedlich sein
+Das Netzwerk gehört zu einem der Kernkomponenten einer LAN-Party. Umso wichtiger ist es ein stabiles Netzwerk aufzubauen, kleine Stolperfallen zu vermeiden und auch vor Fehlern der User gefeilt zu sein. Die Anforderungen sind aber je nach Gästegröße unterschiedlich sein. Hier sehen wir uns also mal eine Empfehlung an, die sich auf LAN-Partys bis 100 Leute gut umsetzen lässt.
 
 ## Der Backbone und die "richtige" Topologie
 
@@ -42,7 +42,7 @@ Apropo Uplink: Von Vorteil ist es natürlich einen Uplinkport zu haben, der eben
 Diese Unterscheidung kommt aus dem OSI-Schicht Modell. Beim Layer-2 geht es darum, die Übertragung sicherzustellen z. B. durch Fehlerkorrekturen. Dabei passiert das einfach "stumpf" und es erfolgt keinerlei Flusskontrolle ob das Paket durch darf oder nicht. Sprich die Befehle, die der Switch bekommt setzt er einfach um ohne darüber nachzudenken, ob er das darf oder nicht.
 
 ### Layer 3
-Beim Layer 3 gibt eine genaue Flusskontrolle. Bei den Switchen redet man auch von "managed Switches". Diese sind meistens über ein Web-Interface oder einer Kommandozeile konfigurierbar. Dort kann man dann genau festlegen, welcher Port darf was. Die Konfigurationsmöglichkeiten unterscheiden sich aber trotzdem auch bei jedem Hersteller und der Preiskategorie.
+Beim Layer 3 gibt eine genaue Flusskontrolle. Bei den Switchen redet man auch von "managed Switches". Diese sind meistens über ein Web-Interface oder einer Kommandozeile konfigurierbar. Dort kann man dann genau festlegen, welcher Port darf was. Die Konfigurationsmöglichkeiten unterscheiden sich aber trotzdem auch bei jedem Hersteller und der Preiskategorie. Sind wir bei LAN-Partys von mehr als 100 Leuten unterwegs, ist es Pflicht einen Layer-3 Switch zu nehmen!
 
 ### Nimm ich also lieber managed Switche?
 
@@ -87,7 +87,12 @@ Die Kommunikation mit der Außenwelt (dieses Neuland namens Internet) sollte auc
 
 ### Baut euch euren eigenen Router, auch Virtuell!
 
-Der beste Weg ist es sich, für die Veranstaltung seinen eigenen Router zu bauen, dieser kann auch Virtuell sein! Alles was man dafür braucht ist min. zwei Netzwerkkarten (Eine fürs LAN-Netzwerk und jeweils eine für das WAN-Netzwerk [also das Internet]). Die besten Erfahrungen eines Routers habe ich mit [pfSense](https://www.pfsense.org/) gemacht. Dieses ist eine kostenlose Firewall, die wirklich alle möglichen Einstellungen zulässt, mit Paketen noch erweitert werden kann und auch für den professionellen Einsatz vorbereitet ist. 
+Der beste Weg ist es sich, für die Veranstaltung seinen eigenen Router zu bauen, dieser kann auch Virtuell sein! Alles was man dafür braucht ist min. zwei Netzwerkkarten (Eine fürs LAN-Netzwerk und jeweils eine für das WAN-Netzwerk [also das Internet]). Folgende Lösungen bieten sich für sowas zum Beispiel an:
+
+ - [pfSense](https://www.pfsense.org)
+ - [OPNSense](https://opnsense.org)
+ - [IPFire](https://www.ipfire.org)
+ - [Sophos XG](https://www.sophos.com/de-de/products/free-tools/sophos-xg-firewall-home-edition.aspx)
 
 ### Traffic shaping
 
