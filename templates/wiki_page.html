@@ -1,6 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <h1>{{ page.title }}</h1>
+
+{% if page.extra.authors %}
+<small>
+  {{ page.extra.authors | length | pluralize(singular="Autor", plural="Autoren") }}:
+  {{ page.extra.authors | join(sep=", ") }}
+</small>
+{% endif %}
+
+{% if page.toc %}
+<details class="mt">
+  <summary>Inhaltsverzeichnis</summary>
+  <ol>
+  {% for h1 in page.toc %}
+    <li>
+      <a href="{{ h1.permalink }}">{{ h1.title }}</a>
+    {% if h1.children %}
+      <ol>
+      {% for h2 in h1.children %}
+        <li>
+          <a href="{{ h2.permalink }}">{{ h2.title }}</a>
+        </li>
+      {% endfor %}
+      </ol>
+    {% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+</details>
+{% endif %}
+
 {{ page.content | safe }}
+
 {% endblock content %}

@@ -51,12 +51,6 @@ table {
   border-spacing: 0;
 }
 
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 figure {
   margin: 0;
   padding: 0;
@@ -519,6 +513,10 @@ img {
 
 .mb {
   margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
 }
 
 .centered {
