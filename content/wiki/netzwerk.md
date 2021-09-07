@@ -2,14 +2,14 @@
 title = "Netzwerk"
 +++
 
-Das Netzwerk gehört zu einem der Kernkomponenten einer LAN-Party. Umso wichtiger ist es ein stabiles Netzwerk aufzubauen, kleine Stolperfallen zu vermeiden und auch vor Fehlern der User gefeilt zu sein. Die Anforderungen sind aber je nach Gästegröße unterschiedlich sein. Hier sehen wir uns also mal eine Empfehlung an, die sich auf LAN-Partys bis 100 Leute gut umsetzen lässt.
+Das Netzwerk gehört zu einem der Kernkomponenten einer LAN-Party. Umso wichtiger ist es ein stabiles Netzwerk aufzubauen, kleine Stolperfallen zu vermeiden und auch vor Fehlern der User gefeilt zu sein. Die Anforderungen sind aber je nach Gästegröße unterschiedlich. Hier sehen wir uns also mal eine Empfehlung an, die sich auf LAN-Partys bis 100 Leute gut umsetzen lässt.
 
 ## Der Backbone und die "richtige" Topologie
 
-Als "Backbone" bezeichnet man das Bindeglied des kompletten Netzwerks. Jeder User muss irgendwie mit jedem User kommunzieren können. Zu alten BNC Zeiten war es ein Bus System. Das bedeutet die Daten hatten ein Anfang und sind einen Weg entlang gefahren. Mit der Einführung von Switches hat man sich für ein Sternsystem entschieden. Machen wir es mal an folgendem Beispiel:
+Als "Backbone" bezeichnet man das Bindeglied des kompletten Netzwerks. Jeder User muss irgendwie mit jedem User kommunizieren können. Zu alten BNC Zeiten war es ein Bus System. Das bedeutet die Daten hatten ein Anfang und sind einen Weg entlang gefahren. Mit der Einführung von Switches hat man sich für ein Sternsystem entschieden. Machen wir es mal an folgendem Beispiel:
 
 Du hast vier Switche und drei Tischgruppen. Jede Tischgruppe möchtest du mit einem Switch ausstatten. Der optimale weg wäre also so, dass du Switch 1 in die "Mitte" stellt und jeweils ein Netzwerkkabel von Switch 1 an Switch 2, 3 und 4 anschließt, also eine Sterntopologie. Dieses Kabel nennt man dann auch "Uplink", denn dieses sorgt dafür auch mit den anderen Switchen kommunizieren zu können.
-Jetzt könnte man noch auf die Idee kommen einen Ring zu bauen, sprich Switch 1 --> Switch 2, Switch 2 --> Switch 3, Switch 3 --> Switch 4, Switch 4 --> Switch 1. Kann man bauen, ist aber scheisse. Wieso? Weil mehere Uplinks für den Datentransfer genutzt werden müssen. Wir reden zwar im LAN über Milliesekunden, trotzdem stresst es ungeneim. 
+Jetzt könnte man noch auf die Idee kommen einen Ring zu bauen, sprich Switch 1 --> Switch 2, Switch 2 --> Switch 3, Switch 3 --> Switch 4, Switch 4 --> Switch 1. Kann man bauen, ist aber Scheisse. Wieso? Weil mehrere Uplinks für den Datentransfer genutzt werden müssen. Wir reden zwar im LAN über Millisekunden, trotzdem stresst es ungemein. 
 Wir nehmen das Beispiel, dass ein User von Switch 2 mit Switch 4 sprechen möchte. Folgendes passiert:
 
  - Switch 2 nutzt seinen Uplink zu Switch 3
@@ -22,10 +22,10 @@ Bedeutet also wir haben zusätzlich noch den Uplink von Switch 3 belastet. Jetzt
 Man könnte jetzt auf die Idee kommen, zwei Uplinks von Switch 1 zu Switch 2 zu bauen. Baut man dieses bei einem "dummen" Layer 2 Switch hat man erfolgreich einen Loop gebaut und hat gar kein funktionierendes Netzwerk mehr.
 
 #### Ein Loop?
-Richtig, der Tot eines jeden Netzwerk ist ein Loop. Dieses passiert z. B. wenn man ein Netzwerkkabel nimmt und beide Kabelenden an den selben Switch steckt, oder aber zwei Uplinks bauen möchte und keinen "Trunk" bauen kann. Macht man dass, weiß der Switch nicht genau, an welchen Port er das Paket adressieren soll weil er zwei ziele zur selben Adresse hat. Was dazu führt dann immer mehr Pakete verschickt werden und zur Überlastung des Switches sowie Netzwerkes.
+Richtig, der Tot eines jeden Netzwerk ist ein Loop. Dieses passiert z. B. wenn man ein Netzwerkkabel nimmt und beide Kabelenden an den selben Switch steckt, oder aber zwei Uplinks bauen möchte und keinen "Trunk" bauen kann. Macht man das, weiß der Switch nicht genau, an welchen Port er das Paket adressieren soll weil er zwei Ziele zur selben Adresse hat. Was dazu führt dann immer mehr Pakete verschickt werden und zur Überlastung des Switches sowie Netzwerkes.
 
 ## 100 Mbit/s vs. 1 Gbit/s vs. 10 Gbit/s
-Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind schon lange vorbei, während 2,5 Gbit/s auf immer mehr Computer vorhanden ist kann man zu 99 % davon ausgehen heute mit 1 Gbit/s am PC ausgestattet zu sein. Wer heute also Hardware kauft (wenn sowas überhaupt noch neu vorhanden ist) kauft wirklich veraltete Technik. Spiele generell brauchen nicht viel Datenvolumen, wir sprechen da im Kilobyte pro Sekundebereich, trotzdem ist es nur von Vorteil einem User 1 Gbit/s anzubieten.
+Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind schon lange vorbei, während 2,5 Gbit/s auf immer mehr Computern vorhanden ist kann man zu 99 % davon ausgehen heute mit 1 Gbit/s am PC ausgestattet zu sein. Wer heute also Hardware kauft (wenn sowas überhaupt noch neu vorhanden ist) kauft wirklich veraltete Technik. Spiele generell brauchen nicht viel Datenvolumen, wir sprechen da im Bereich Kilobyte pro Sekunde, trotzdem ist es nur von Vorteil einem User 1 Gbit/s anzubieten.
 
  - Oftmals ist der Uplink das 10-fache der typischen Portgeschwindigkeit. Wenn man sich also einen Tisch vorstellt mit 20 User, müssten 20 User sich 1 Gbit/s zum Backbone teilen. Dieses kann ganz schön eng werden.
  - Downloads von Patches, lokalen Steamcache usw. dauern im schlimmsten Fall 10 mal so lange, bedeutet 10 mal so lange Stress für den Uplink, dass den User selbst und auch die anderen Spieler am Tisch stören kann.
@@ -33,7 +33,7 @@ Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind scho
 Dann gibt es noch 20 Gbit/s und 40 Gbit/s. Dieses sind Geschwindigkeiten, die nicht für den User bestimmt sind, sondern für den Uplink. 
 
 ## Uplink
-Apropo Uplink: Von Vorteil ist es natürlich einen Uplinkport zu haben, der eben eine höhere Geschwindigkeit hat als ein User, ansonsten ist ein einziger User in der Lage, die Kommunikation aller anderen Teilnehmer am Tisch ganz schön zu stressen. Das führt dann zu Datenstau, einen höreren Ping, Lags uvm. Also alles Sachen, die gerade bei schnellen Shooter alles andere als schön ist.
+Apropo Uplink: Von Vorteil ist es natürlich einen Uplinkport zu haben, der eben eine höhere Geschwindigkeit hat als ein User, ansonsten ist ein einziger User in der Lage, die Kommunikation aller anderen Teilnehmer am Tisch ganz schön zu stressen. Das führt dann zu Datenstau, einen höheren Ping, Lags uvm. Also alles Sachen, die gerade bei schnellen Shooter alles andere als schön ist.
 
 ## Layer-2 vs. Layer-3 Switche
 
@@ -46,14 +46,14 @@ Beim Layer 3 gibt eine genaue Flusskontrolle. Bei den Switchen redet man auch vo
 
 ### Nimm ich also lieber managed Switche?
 
-Dass kann man so pauschal nicht sagen. Klar ist, dass eine typische Keller-LAN mit 5 - 10 Teilnehmer so etwas nicht brauchen. Es gibt aber auch andere LANs mit knapp 100 Teilnehmer, die kein Layer-3 Switch haben, sei es entweder als finanziellen Gründen, oder sich die Konfigurations ersparen möchte.
+Dass kann man so pauschal nicht sagen. Klar ist, dass eine typische Keller-LAN mit 5 - 10 Teilnehmer so etwas nicht brauchen. Es gibt aber auch andere LANs mit knapp 100 Teilnehmer, die kein Layer-3 Switch haben, sei es entweder als finanziellen Gründen, oder sich die Konfiguration ersparen möchte.
 
 ## IP-Adresse
 Die Computer im Netzwerk unterhalten sich über das IP-Protokoll. Sprich jeder Teilnehmer bekommt eine IP-Adresse und kann dann so mit anderen Computern reden.
 
 ### IP-Adressen Bereiche
 
-Die Bereiche sind genau geregelt. So gibtes für interne Netzwerk drei IP-Bereiche nur man nutzen darf:
+Die Bereiche sind genau geregelt. So gibt es für interne Netzwerk drei IP-Bereiche nur man nutzen darf:
 
  - 10.0.0.0 - 10.255.255.255
  - 172.16.0.0 - 172.31.255.255
@@ -77,10 +77,10 @@ Um eine IP-Adresse zu erhalten gibt es zwei Wege:
  - Der Teilnehmer selbst trägt sich eine IP-Adresse über seine Systemsteuerung ein
  - Der Teilnehmer bekommt beim einstecken eine IP-Adresse zugewiesen
 
-Das automatische Zuweisen der IP-Adresse erfolgt über eine DHCP-Server. Ob man einen DHCP-Server einsetzt oder nicht muss jeder selbst entscheiden, da streiten sich vorallem die Greister darüber.  Der vorteil eines DHCP Server ist ganz klar: Der User selbst muss nichts einstellen, er stöbselst sich einfach an den Netzwerkport und kann loszocken. Doch gerade in einem sehr großen Netzwerk jemand mit höheren Netzwerkkenntnissen so einiges an Schabernack anrichten, gerade wenn "nur" Layer-2 Switche im Einsatz sind!
+Das automatische Zuweisen der IP-Adresse erfolgt über eine DHCP-Server. Ob man einen DHCP-Server einsetzt oder nicht muss jeder selbst entscheiden, da streiten sich vor allem die Geister darüber.  Der Vorteil eines DHCP Server ist ganz klar: Der User selbst muss nichts einstellen, er stöpselst sich einfach an den Netzwerk Port und kann loszocken. Doch gerade in einem sehr großen Netzwerk jemand mit höheren Netzwerkkenntnissen so einiges an Schabernack anrichten, gerade wenn "nur" Layer-2 Switche im Einsatz sind!
 
 ### Bei DHCP gilt: first Come first Serve!
-Man muss sich das mit DHCP so vorstellen: Sobald ein Client sich anstöbselt, brüllt er wie ein Affe: "HEY, ICH BIN HIER NEU UND BRAUCHE EINE IP-ADRESSE! WER HAT EINE FÜR MICH?". Und die erste Antwort die er darauf bekommt aktzeptiert er und bearbeitet sie. Genau dort liegt das Problem: Wenn sich in einem Netzwerk zwei DHCP-Server befinden kann dies übel enden, denn der zweite Server kann komplett andere Daten haben, somit können dann die Leute mit diesen zwei unterschiedlichen Netzen nicht miteinander kommunizieren. Bei einem Netzwerk mit Layer-3 Switchen kann dies unterbunden werden bzw. genau eingerichtet werden, welche IP-Adresse als DHCP-Server dienen darf. Wer jetzt aber aus dem Artikel herauslist gegen DHCP zu sein: Dem ist nicht so. Große sowie kleine LAN-Partys setzen auf DHCP-Server. Nur bei Layer-2 Netzwerken sollte man immer bereit sein mühsehlig den zu finden, der sich dachte auch IP-Adressen vergeben zu dürfen :) 
+Man muss sich das mit DHCP so vorstellen: Sobald ein Client sich antobest, brüllt er wie ein Affe: "HEY, ICH BIN HIER NEU UND BRAUCHE EINE IP-ADRESSE! WER HAT EINE FÜR MICH?". Und die erste Antwort die er darauf bekommt akzeptiert er und bearbeitet sie. Genau dort liegt das Problem: Wenn sich in einem Netzwerk zwei DHCP-Server befinden kann dies übel enden, denn der zweite Server kann komplett andere Daten haben, somit können dann die Leute mit diesen zwei unterschiedlichen Netzen nicht miteinander kommunizieren. Bei einem Netzwerk mit Layer-3 Switchen kann dies unterbunden werden bzw. genau eingerichtet werden, welche IP-Adresse als DHCP-Server dienen darf. Wer jetzt aber aus dem Artikel herausliest gegen DHCP zu sein: Dem ist nicht so. Große sowie kleine LAN-Partys setzen auf DHCP-Server. Nur bei Layer-2 Netzwerken sollte man immer bereit sein mühselig den zu finden, der sich dachte auch IP-Adressen vergeben zu dürfen :) 
 
 ## Router
 Die Kommunikation mit der Außenwelt (dieses Neuland namens Internet) sollte auch besser vorbereitet sein. Während eine Fritzbox ein Heimnetzwerk mit 10 - 20 Leuten noch so Meistern kann, würde es bei 100 Teilnehmern schon sehr eng werden. Von den fehlenden Konfigurationsmöglichkeiten mal abgesehen.
@@ -94,11 +94,11 @@ Der beste Weg ist es sich, für die Veranstaltung seinen eigenen Router zu bauen
  - [IPFire](https://www.ipfire.org)
  - [Sophos XG](https://www.sophos.com/de-de/products/free-tools/sophos-xg-firewall-home-edition.aspx)
 
-### Traffic shaping
+### Traffic Shaping
 
-Um was man nicht herumkommt ab einer gewissen Größe ist es den einzelnen Nutzer zu regulieren, wie viel Bandbreite er abgekommt. Fakt ist nunmal, die Verbindung ins Internet ist begrenzt und zwar stärker als im LAN. Ohne Beschränkungen wäre es also von einem User schon möglich mit einem etwas größeren Download die komplette Internetleitung zu blockieren und der gesamten LAN das Interneterlebnis vermiesen. Deshalb ist es wichtig zu sagen: Ein einziger User bekommt nur eine gewisse Bandbreite, da reichen selbst 128 kbit/s pro User. Wem das wenig vorkommt: Die meisten Spiele begnügen sich bereits mit ~ 50 kbit/s. 
+Um was man nicht herumkommt ab einer gewissen Größe ist es den einzelnen Nutzer zu regulieren, wie viel Bandbreite er abbekommt. Fakt ist nun mal, die Verbindung ins Internet ist begrenzt und zwar stärker als im LAN. Ohne Beschränkungen wäre es also von einem User schon möglich mit einem etwas größeren Download die komplette Internetleitung zu blockieren und der gesamten LAN das Interneterlebnis vermiesen. Deshalb ist es wichtig zu sagen: Ein einziger User bekommt nur eine gewisse Bandbreite, da reichen selbst 128 kbit/s pro User. Wem das wenig vorkommt: Die meisten Spiele begnügen sich bereits mit ~ 50 kbit/s. 
 
 ### QoS
 
-Ein weiterer Punkt der einem das Leben erleichten kann mit der Außenwelt ist Quality of Service (QoS). Damit kann man festlegen welche Datenpakete eine höhrere Priorität haben. QoS wird selbst im Heimrouter betrieben, jeder gängige Router weis, dass z. B. Datenpakete aus der Telefonie zeitkritisch und damit wichtiger sind als z. B. aus aufrufen einer Website. Das ist auch einer der Gründe für Lags wenn man einen großen Download hat. Ein Großteil des Datenverkehrs erfolgt über das TCP Protokoll, dass bei einem gesendeten Packet auf eine Bestätigung wartet. Im Beispiel eines großen Downloads ist es sehr oft so das auch der Upload komplett ausgelastet ist. Dies bedeutet dass das "ACK"-Paket, dass die Bestätigung für den richtigen Empfang des TCP-Paket ist, viel später ankommt, was zu einem höheren Ping und auch Lags führt.
+Ein weiterer Punkt der einem das Leben erleichtern kann mit der Außenwelt ist Quality of Service (QoS). Damit kann man festlegen welche Datenpakete eine höhere Priorität haben. QoS wird selbst im Heimrouter betrieben, jeder gängige Router weis, dass z. B. Datenpakete aus der Telefonie zeitkritisch und damit wichtiger sind als z. B. aus aufrufen einer Website. Das ist auch einer der Gründe für Lags wenn man einen großen Download hat. Ein Großteil des Datenverkehrs erfolgt über das TCP Protokoll, dass bei einem gesendeten Packet auf eine Bestätigung wartet. Im Beispiel eines großen Downloads ist es sehr oft so das auch der Upload komplett ausgelastet ist. Dies bedeutet dass das "ACK"-Paket, dass die Bestätigung für den richtigen Empfang des TCP-Paket ist, viel später ankommt, was zu einem höheren Ping und auch Lags führt.
 
