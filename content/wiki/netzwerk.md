@@ -10,6 +10,7 @@ Als "Backbone" bezeichnet man das Bindeglied des kompletten Netzwerks. Jeder Use
 
 Du hast vier Switche und drei Tischgruppen. Jede Tischgruppe möchtest du mit einem Switch ausstatten. Der optimale weg wäre also so, dass du Switch 1 in die "Mitte" stellt und jeweils ein Netzwerkkabel von Switch 1 an Switch 2, 3 und 4 anschließt, also eine Sterntopologie. Dieses Kabel nennt man dann auch "Uplink", denn dieses sorgt dafür auch mit den anderen Switchen kommunizieren zu können.
 Jetzt könnte man noch auf die Idee kommen einen Ring zu bauen, sprich Switch 1 --> Switch 2, Switch 2 --> Switch 3, Switch 3 --> Switch 4, Switch 4 --> Switch 1. Kann man bauen, ist aber Scheisse. Wieso? Weil mehrere Uplinks für den Datentransfer genutzt werden müssen. Wir reden zwar im LAN über Millisekunden, trotzdem stresst es ungemein. 
+
 Wir nehmen das Beispiel, dass ein User von Switch 2 mit Switch 4 sprechen möchte. Folgendes passiert:
 
  - Switch 2 nutzt seinen Uplink zu Switch 3
@@ -22,10 +23,13 @@ Bedeutet also wir haben zusätzlich noch den Uplink von Switch 3 belastet. Jetzt
 Man könnte jetzt auf die Idee kommen, zwei Uplinks von Switch 1 zu Switch 2 zu bauen. Baut man dieses bei einem "dummen" Layer 2 Switch hat man erfolgreich einen Loop gebaut und hat gar kein funktionierendes Netzwerk mehr.
 
 #### Ein Loop?
+
 Richtig, der Tot eines jeden Netzwerk ist ein Loop. Dieses passiert z. B. wenn man ein Netzwerkkabel nimmt und beide Kabelenden an den selben Switch steckt, oder aber zwei Uplinks bauen möchte und keinen "Trunk" bauen kann. Macht man das, weiß der Switch nicht genau, an welchen Port er das Paket adressieren soll weil er zwei Ziele zur selben Adresse hat. Was dazu führt dann immer mehr Pakete verschickt werden und zur Überlastung des Switches sowie Netzwerkes.
 
 ## 100 Mbit/s vs. 1 Gbit/s vs. 10 Gbit/s
 Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind schon lange vorbei, während 2,5 Gbit/s auf immer mehr Computern vorhanden ist kann man zu 99 % davon ausgehen heute mit 1 Gbit/s am PC ausgestattet zu sein. Wer heute also Hardware kauft (wenn sowas überhaupt noch neu vorhanden ist) kauft wirklich veraltete Technik. Spiele generell brauchen nicht viel Datenvolumen, wir sprechen da im Bereich Kilobyte pro Sekunde, trotzdem ist es nur von Vorteil einem User 1 Gbit/s anzubieten.
+
+
 
  - Oftmals ist der Uplink das 10-fache der typischen Portgeschwindigkeit. Wenn man sich also einen Tisch vorstellt mit 20 User, müssten 20 User sich 1 Gbit/s zum Backbone teilen. Dieses kann ganz schön eng werden.
  - Downloads von Patches, lokalen Steamcache usw. dauern im schlimmsten Fall 10 mal so lange, bedeutet 10 mal so lange Stress für den Uplink, dass den User selbst und auch die anderen Spieler am Tisch stören kann.
@@ -33,6 +37,7 @@ Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind scho
 Dann gibt es noch 20 Gbit/s und 40 Gbit/s. Dieses sind Geschwindigkeiten, die nicht für den User bestimmt sind, sondern für den Uplink. 
 
 ## Uplink
+
 Apropo Uplink: Von Vorteil ist es natürlich einen Uplinkport zu haben, der eben eine höhere Geschwindigkeit hat als ein User, ansonsten ist ein einziger User in der Lage, die Kommunikation aller anderen Teilnehmer am Tisch ganz schön zu stressen. Das führt dann zu Datenstau, einen höheren Ping, Lags uvm. Also alles Sachen, die gerade bei schnellen Shooter alles andere als schön ist.
 
 ## Layer-2 vs. Layer-3 Switche
@@ -101,4 +106,3 @@ Um was man nicht herumkommt ab einer gewissen Größe ist es den einzelnen Nutze
 ### QoS
 
 Ein weiterer Punkt der einem das Leben erleichtern kann mit der Außenwelt ist Quality of Service (QoS). Damit kann man festlegen welche Datenpakete eine höhere Priorität haben. QoS wird selbst im Heimrouter betrieben, jeder gängige Router weis, dass z. B. Datenpakete aus der Telefonie zeitkritisch und damit wichtiger sind als z. B. aus aufrufen einer Website. Das ist auch einer der Gründe für Lags wenn man einen großen Download hat. Ein Großteil des Datenverkehrs erfolgt über das TCP Protokoll, dass bei einem gesendeten Packet auf eine Bestätigung wartet. Im Beispiel eines großen Downloads ist es sehr oft so das auch der Upload komplett ausgelastet ist. Dies bedeutet dass das "ACK"-Paket, dass die Bestätigung für den richtigen Empfang des TCP-Paket ist, viel später ankommt, was zu einem höheren Ping und auch Lags führt.
-
