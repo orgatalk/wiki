@@ -63,28 +63,48 @@ Apropo Uplink: Von Vorteil ist es natürlich einen Uplinkport zu haben, der eben
 Das führt dann zu Datenstau, einen höheren Ping, Lags uvm.
 Also alles Sachen, die gerade bei schnellen Shooter alles andere als schön ist.
 
-## Layer-2 vs. Layer-3 Switche
+## Managed vs Unmanaged Switches
 
-### Layer 2
+### Unmanaged Switches
 
-Diese Unterscheidung kommt aus dem OSI-Schicht Modell.
-Beim Layer-2 geht es darum, die Übertragung sicherzustellen z. B. durch Fehlerkorrekturen.
-Dabei passiert das einfach "stumpf" und es erfolgt keinerlei Flusskontrolle ob das Paket durch darf oder nicht.
-Sprich die Befehle, die der Switch bekommt setzt er einfach um ohne darüber nachzudenken, ob er das darf oder nicht.
+Ein nicht managebarer Switch ist die einfachste Form eines Switches.
+Er macht einfach nur MAC-Address-Learning und leitet Pakete weiter.
+Man kann den Switch einfach aufbauen und hoffen, dass er immer das richtige
+tut und sich auch alle Geräte im Netzwerk anständig verhalten.
+Es gibt keinerlei Möglichkeiten etwas zu konfigurieren oder zu überwachen.
 
-### Layer 3
-Beim Layer 3 gibt eine genaue Flusskontrolle.
-Bei den Switchen redet man auch von "managed Switches".
-Diese sind meistens über ein Web-Interface oder einer Kommandozeile konfigurierbar.
-Dort kann man dann genau festlegen, welcher Port darf was.
-Die Konfigurationsmöglichkeiten unterscheiden sich aber trotzdem auch bei jedem Hersteller und der Preiskategorie.
-Sind wir bei LAN-Partys von mehr als 100 Leuten unterwegs, ist es Pflicht einen Layer-3 Switch zu nehmen!
+### Managed-Switches
 
-### Nimm ich also lieber managed Switche?
+Managebare Switches bieten viele Möglichkeiten den Datenverkehr zu beeinflussen
+oder zu überwachen.
+Dafür muss man das Gerät aber entsprechend konfigurieren.
+Das passiert i.d.R. über ein Web-Interface, einen Console-Port oder per SSH.
+
+Was das jeweilige Modell für Features unterstützt steht im entsprechenden Datenblatt
+Öfter mal gebrauchen kann man:
+
+- VLAN Tagging
+- DHCP Snooping
+- LACP/Port-Channels/LAGs (jeder Hersteller hat sich mal irgendwann gedacht das Feature anders nennen zu müssen)
+- SNMP
+- Spanning-Tree-Protokol (am bestern RSTP oder MST)
+- Access Controll Lists
+- IGMP/MLD Snooping
+
+### Nehm ich also lieber managed Switche?
 
 Dass kann man so pauschal nicht sagen.
-Klar ist, dass eine typische Keller-LAN mit 5 - 10 Teilnehmer so etwas nicht brauchen.
-Es gibt aber auch andere LANs mit knapp 100 Teilnehmer, die kein Layer-3 Switch haben, sei es entweder als finanziellen Gründen, oder sich die Konfiguration ersparen möchte.
+Klar ist, dass eine typische Keller-LAN mit 5 - 10 Teilnehmer keine managed Switches braucht.
+Managebare Switches bieten einen ganzen Haufen Features, die in vielen Situationen nützlich sein können.
+Wer ein Netz aus unmanaged Switches betreibt ist in vielen Fällen den Geräten im Netz hilflos ausgeliefert.
+Mit managed Switches kann man zum einen sich gegen Probleme wie Loops oder Rogue DHCP Server schützen
+und zum anderen genau rausfinden, an welchem Switchport ein gewisser Rechner hängt, wo der Loop gesteckt wurde,
+ob ein Port viele kaputte Pakete empfängt, usw.
+Falls man also die Wahl hat möchte man sich für managebare Geräte entscheiden.
+Die sind auch auf dem Gebrauchtmarkt relativ erschwinglich. Ansonsten kann man
+einfach mal die freundliche LAN Party in der Umgebung fragen, ob die einem
+Geräte leihen können, weil bei denen liegt die Technik i.d.R. auch die meiste
+Zeit vom Jahr im Keller.
 
 ## IP-Adresse
 Die Computer im Netzwerk unterhalten sich über das IP-Protokoll.
