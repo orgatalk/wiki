@@ -3,6 +3,7 @@ title = "Turniere"
 
 [extra]
 authors = ["Y0Gi"]
+header_image = "/wiki/turniere_header.webp"
 +++
 
 ## Motivation

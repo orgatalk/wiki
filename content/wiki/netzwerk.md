@@ -1,5 +1,9 @@
 +++
 title = "Netzwerk"
+
+[extra]
+header_image = "/wiki/netzwerk_header.webp"
+header_image_credit = "Micha Ober"
 +++
 
 Das Netzwerk ist einer der Kernkomponenten einer LAN-Party.
