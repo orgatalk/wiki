@@ -16,7 +16,7 @@ Wir nehmen das Beispiel, dass ein User von Switch 2 mit Switch 4 sprechen möcht
  - Switch 2 nutzt seinen Uplink zu Switch 3
  - Das Paket geht dann weiter über den Uplink zu Switch 4
 
-Bedeutet also wir haben zusätzlich noch den Uplink von Switch 3 belastet. Jetzt stellt euch mal vor alle User würden das machen, dann wären nicht nur die User an Switch 2 und Switch 4 in Leidenschaft, sondern auch an Switch 3. 
+Bedeutet also wir haben zusätzlich noch den Uplink von Switch 3 belastet. Jetzt stellt euch mal vor alle User würden das machen, dann wären nicht nur die User an Switch 2 und Switch 4 in Leidenschaft, sondern auch an Switch 3.
 
 ### Doppelt hält besser beim Uplink? Nicht unbedingt ...
 
@@ -34,7 +34,7 @@ Es gab mal eine Zeit, da war 100 Mbit/s state of the art. Diese Zeiten sind scho
  - Oftmals ist der Uplink das 10-fache der typischen Portgeschwindigkeit. Wenn man sich also einen Tisch vorstellt mit 20 User, müssten 20 User sich 1 Gbit/s zum Backbone teilen. Dieses kann ganz schön eng werden.
  - Downloads von Patches, lokalen Steamcache usw. dauern im schlimmsten Fall 10 mal so lange, bedeutet 10 mal so lange Stress für den Uplink, dass den User selbst und auch die anderen Spieler am Tisch stören kann.
 
-Dann gibt es noch 20 Gbit/s und 40 Gbit/s. Dieses sind Geschwindigkeiten, die nicht für den User bestimmt sind, sondern für den Uplink. 
+Dann gibt es noch 20 Gbit/s und 40 Gbit/s. Dieses sind Geschwindigkeiten, die nicht für den User bestimmt sind, sondern für den Uplink.
 
 ## Uplink
 
@@ -70,11 +70,11 @@ Die Subnetzmaske gibt an, wie groß das eigene Netzwerk ist, jegliche Kommunikat
  - 10.0.0.0/8
  - 10.0.0.0 mit der Netzmaske 255.0.0.0
 
-Im obengenannten Beispiel können jetzt 16.777.214 Computer eine IP-Adresse bekommen. Also ziemlich groß. Normale Heimrouter bieten meistens ein 192.168.0.0/24 Netz an, in diesem gibt es dann 255 Adressen. In welcher Größe ihr euer Netzwerk haben wollt müsst ihr entscheiden, wählt ihr es zu klein könnte es euch passieren das nicht alle Clients eine IP-Adresse bekommen. 
+Im obengenannten Beispiel können jetzt 16.777.214 Computer eine IP-Adresse bekommen. Also ziemlich groß. Normale Heimrouter bieten meistens ein 192.168.0.0/24 Netz an, in diesem gibt es dann 255 Adressen. In welcher Größe ihr euer Netzwerk haben wollt müsst ihr entscheiden, wählt ihr es zu klein könnte es euch passieren das nicht alle Clients eine IP-Adresse bekommen.
 
 ### Gateway
 
-Das ist die Adresse, die genutzt wird um mit Netzen außerhalb eurem Netzwerk zu kommunizieren. Im Heimfall z. B. dann euer Router. 
+Das ist die Adresse, die genutzt wird um mit Netzen außerhalb eurem Netzwerk zu kommunizieren. Im Heimfall z. B. dann euer Router.
 
 ## DHCP vs. non-DHCP
 Um eine IP-Adresse zu erhalten gibt es zwei Wege:
@@ -85,7 +85,7 @@ Um eine IP-Adresse zu erhalten gibt es zwei Wege:
 Das automatische Zuweisen der IP-Adresse erfolgt über eine DHCP-Server. Ob man einen DHCP-Server einsetzt oder nicht muss jeder selbst entscheiden, da streiten sich vor allem die Geister darüber.  Der Vorteil eines DHCP Server ist ganz klar: Der User selbst muss nichts einstellen, er stöpselst sich einfach an den Netzwerk Port und kann loszocken. Doch gerade in einem sehr großen Netzwerk jemand mit höheren Netzwerkkenntnissen so einiges an Schabernack anrichten, gerade wenn "nur" Layer-2 Switche im Einsatz sind!
 
 ### Bei DHCP gilt: first Come first Serve!
-Man muss sich das mit DHCP so vorstellen: Sobald ein Client sich antobest, brüllt er wie ein Affe: "HEY, ICH BIN HIER NEU UND BRAUCHE EINE IP-ADRESSE! WER HAT EINE FÜR MICH?". Und die erste Antwort die er darauf bekommt akzeptiert er und bearbeitet sie. Genau dort liegt das Problem: Wenn sich in einem Netzwerk zwei DHCP-Server befinden kann dies übel enden, denn der zweite Server kann komplett andere Daten haben, somit können dann die Leute mit diesen zwei unterschiedlichen Netzen nicht miteinander kommunizieren. Bei einem Netzwerk mit Layer-3 Switchen kann dies unterbunden werden bzw. genau eingerichtet werden, welche IP-Adresse als DHCP-Server dienen darf. Wer jetzt aber aus dem Artikel herausliest gegen DHCP zu sein: Dem ist nicht so. Große sowie kleine LAN-Partys setzen auf DHCP-Server. Nur bei Layer-2 Netzwerken sollte man immer bereit sein mühselig den zu finden, der sich dachte auch IP-Adressen vergeben zu dürfen :) 
+Man muss sich das mit DHCP so vorstellen: Sobald ein Client sich antobest, brüllt er wie ein Affe: "HEY, ICH BIN HIER NEU UND BRAUCHE EINE IP-ADRESSE! WER HAT EINE FÜR MICH?". Und die erste Antwort die er darauf bekommt akzeptiert er und bearbeitet sie. Genau dort liegt das Problem: Wenn sich in einem Netzwerk zwei DHCP-Server befinden kann dies übel enden, denn der zweite Server kann komplett andere Daten haben, somit können dann die Leute mit diesen zwei unterschiedlichen Netzen nicht miteinander kommunizieren. Bei einem Netzwerk mit Layer-3 Switchen kann dies unterbunden werden bzw. genau eingerichtet werden, welche IP-Adresse als DHCP-Server dienen darf. Wer jetzt aber aus dem Artikel herausliest gegen DHCP zu sein: Dem ist nicht so. Große sowie kleine LAN-Partys setzen auf DHCP-Server. Nur bei Layer-2 Netzwerken sollte man immer bereit sein mühselig den zu finden, der sich dachte auch IP-Adressen vergeben zu dürfen :)
 
 ## Router
 Die Kommunikation mit der Außenwelt (dieses Neuland namens Internet) sollte auch besser vorbereitet sein. Während eine Fritzbox ein Heimnetzwerk mit 10 - 20 Leuten noch so Meistern kann, würde es bei 100 Teilnehmern schon sehr eng werden. Von den fehlenden Konfigurationsmöglichkeiten mal abgesehen.
@@ -101,7 +101,7 @@ Der beste Weg ist es sich, für die Veranstaltung seinen eigenen Router zu bauen
 
 ### Traffic Shaping
 
-Um was man nicht herumkommt ab einer gewissen Größe ist es den einzelnen Nutzer zu regulieren, wie viel Bandbreite er abbekommt. Fakt ist nun mal, die Verbindung ins Internet ist begrenzt und zwar stärker als im LAN. Ohne Beschränkungen wäre es also von einem User schon möglich mit einem etwas größeren Download die komplette Internetleitung zu blockieren und der gesamten LAN das Interneterlebnis vermiesen. Deshalb ist es wichtig zu sagen: Ein einziger User bekommt nur eine gewisse Bandbreite, da reichen selbst 128 kbit/s pro User. Wem das wenig vorkommt: Die meisten Spiele begnügen sich bereits mit ~ 50 kbit/s. 
+Um was man nicht herumkommt ab einer gewissen Größe ist es den einzelnen Nutzer zu regulieren, wie viel Bandbreite er abbekommt. Fakt ist nun mal, die Verbindung ins Internet ist begrenzt und zwar stärker als im LAN. Ohne Beschränkungen wäre es also von einem User schon möglich mit einem etwas größeren Download die komplette Internetleitung zu blockieren und der gesamten LAN das Interneterlebnis vermiesen. Deshalb ist es wichtig zu sagen: Ein einziger User bekommt nur eine gewisse Bandbreite, da reichen selbst 128 kbit/s pro User. Wem das wenig vorkommt: Die meisten Spiele begnügen sich bereits mit ~ 50 kbit/s.
 
 ### QoS
 
