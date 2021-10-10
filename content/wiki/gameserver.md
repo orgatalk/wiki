@@ -15,7 +15,7 @@ Die Rolle des Host können dabei unterschiedliche Programme übernehmen.
 # Listen Server
 
 Kann aus einem zum Spielen installierten Spiele-Client heraus ein eigener Server angeboten werden, dem andere Clients
-(zumindest im selben [Netzwerk](/wiki/netzwerk)) beitreten können, so spricht man von einem "Listen Server".
+(zumindest im selben [Netzwerk](@/wiki/netzwerk.md)) beitreten können, so spricht man von einem "Listen Server".
 
 Dies bedarf keiner zusätzlichen Software und Konfiguration. Es gibt jedoch Nachteile:
 
@@ -41,7 +41,7 @@ werden.
 
 Zudem lassen sich sowohl die Konfigurationen als auch die verfügbaren Maps und Modifikationen sowie letztlich die
 kompletten Server selbst mit entsprechenden Werkzeugen verfielfältigen und sogar dynamisch installieren und starten.
-Das ist insbesondere für größere [Turniere](/wiki/turniere) nützlich, aber auch für die effizientere Nutzung von
+Das ist insbesondere für größere [Turniere](@/wiki/turniere.md) nützlich, aber auch für die effizientere Nutzung von
 verfügbaren Serverressourcen durch wechselnden bzw. temporären Betrieb verschiedener Dedicated Server.
 
 Voraussetzung ist allerdings, dass für das jeweilige Spiel überhaupt Dedicated Server angeboten werden. Während dies

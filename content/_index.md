@@ -20,12 +20,12 @@ Alle Artikel, bei denen es sinnvoll erscheint, werden wir nach geplanter Größe
 - 20 bis 100 Teilnehmer
 - mehr als 100 Teilnehmer
 
-[Bereit, selbst eine LAN-Party auf die Beine zu stellen?](/wiki/getting-started)
+[Bereit, selbst eine LAN-Party auf die Beine zu stellen?](@/wiki/getting-started.md)
 
 
 ## Inhalt
 
-[Liste der vorhandenen Seiten](/wiki/)
+[Liste der vorhandenen Seiten](@/wiki/_index.md)
 
 ## Änderungen
 
