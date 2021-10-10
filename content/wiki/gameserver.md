@@ -15,7 +15,7 @@ Die Rolle des Host können dabei unterschiedliche Programme übernehmen.
 # Listen Server
 
 Kann aus einem zum Spielen installierten Spiele-Client heraus ein eigener Server angeboten werden, dem andere Clients
-(zumindest im selben [Netzwerk](/wiki/Netzwerk)) beitreten können, so spricht man von einem "Listen Server".
+(zumindest im selben [Netzwerk](/wiki/netzwerk)) beitreten können, so spricht man von einem "Listen Server".
 
 Dies bedarf keiner zusätzlichen Software und Konfiguration. Es gibt jedoch Nachteile:
 
