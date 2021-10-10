@@ -12,7 +12,8 @@ Du hast bereits ein Angebot für eine Location und fragst dich: "Was brauche ich
 
 Das Veranstalten einer öffentlichen LAN-Party mit fremden Gästen ist alles andere als einfach.
 Dies erfordert ab einer gewissen Größe eine sorgfältige Planung in vielen Bereichen, wie zum Beispiel:
-Location, Termin, Finanzen, Technik, Strom, Netzwerk, Server, Internet, Beamer/Bühne, Events, Einlass, Catering, Bar, Schlafen, Presse, Werbung, Sponsoring, …
+Location, Termin, Finanzen, Technik, Strom, [Netzwerk](@/wiki/netzwerk.md), Server, Internet, [Turniere](@/wiki/turniere.md),
+Beamer/Bühne, Events, [Einlass](@/wiki/einlass.md), Catering, Bar, Schlafen, Presse, Werbung, [Sponsoring](@/wiki/sponsoring.md), …
 
 Alle Artikel, bei denen es sinnvoll erscheint, werden wir nach geplanter Größe der Veranstaltung aufteilen:
 
