@@ -4,7 +4,7 @@ title = "Einlass"
 [extra]
 authors = ["Y0Gi"]
 header_image = "/wiki/einlass_header.webp"
-header_image_credit = "Micha Ober"
+header_image_credit = "Sebastian Humbek"
 +++
 
 ## Aufgaben
