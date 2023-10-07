@@ -20,12 +20,12 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /usr/local/bin/zola
-          key: zola-v0.14.1
+          key: zola-v0.17.2
 
       - name: Install Zola
         if: steps.cache-zola.outputs.cache-hit != 'true'
         run: |
-          wget -q -O - 'https://github.com/getzola/zola/releases/download/v0.14.1/zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz' | tar xzf - -C /usr/local/bin
+          wget -q -O - 'https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz' | tar xzf - -C /usr/local/bin
 
       - name: Configure Git
         run: |
