@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netzwerk &middot; OrgaTalk-Wiki</title>
+    <link rel="stylesheet" href="/style/common.css">
+    <link rel="stylesheet" href="/style/orgatalk.css">
+    <meta name="description" content="Wiki mit Tipps zur Organisation von LAN-Partys">
+    <meta name="keywords" content="LANparty, LAN-Party, Wiki, Organisation, Technik, Netzwerk, Server, Dienste">
+    <meta property="og:description" content="Wiki mit Tipps zur Organisation von LAN-Partys">
+    <meta property="og:image" content="https://wiki.orgatalk.de/images/logo-square_480x480.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="480">
+    <meta property="og:image" content="https://wiki.orgatalk.de/images/banner_720x160.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="720">
+    <meta property="og:image:height" content="160">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="OrgaTalk">
+    <meta property="og:title" content="Netzwerk &middot; OrgaTalk-Wiki">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+
+    <div class="page-layout">
+
+      <section class="page-header">
+        <header class="container header">
+
+          <a href="/" class="header-item">
+            <div class="header-brand-icon">
+              <svg viewBox="0 0 17 16">
+                <path fill="currentColor" d="M8 3.429c-3.714 0-6.857 2.089-6.857 4.571 0 1.33 0.893 2.598 2.438 3.473l0.777 0.446-0.241 0.857c-0.17 0.634-0.393 1.125-0.625 1.536 0.902-0.375 1.723-0.884 2.455-1.527l0.384-0.339 0.509 0.054c0.384 0.045 0.777 0.071 1.161 0.071 3.714 0 6.857-2.089 6.857-4.571s-3.143-4.571-6.857-4.571zM16 8c0 3.161-3.58 5.714-8 5.714-0.438 0-0.875-0.027-1.295-0.071-1.17 1.036-2.563 1.768-4.107 2.161-0.321 0.089-0.67 0.152-1.018 0.196h-0.045c-0.179 0-0.339-0.143-0.384-0.339v-0.009c-0.045-0.223 0.107-0.357 0.241-0.518 0.563-0.634 1.205-1.17 1.625-2.661-1.839-1.045-3.018-2.661-3.018-4.473 0-3.161 3.58-5.714 8-5.714v0c4.42 0 8 2.554 8 5.714z"/>
+              </svg>
+            </div>
+            <div class="header-brand-text">
+              <div class="header-brand-title">OrgaTalk-Wiki</div>
+              <div class="header-brand-subtitle">Weil wir das schon immer so gemacht haben.</div>
+            </div>
+          </a>
+
+        </header>
+      </section>
+
+      <main class="page-body">
+        <div class="container">
+
+
+
+<img src="&#x2F;wiki&#x2F;netzwerk_header.webp">
+  
+  <small><div class="dimmed" style="text-align: right;">Bild: Micha Ober</div></small>
+  
+
+
+<h1>Netzwerk</h1>
+
+
+
+
+<details class="mt">
+  <summary>Inhaltsverzeichnis</summary>
+  <ol>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#der-backbone-und-die-richtige-topologie">Der Backbone und die &quot;richtige&quot; Topologie</a>
+    
+      <ol>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#doppelt-halt-besser-beim-uplink-nicht-unbedingt">Doppelt hält besser beim Uplink? Nicht unbedingt …</a>
+        </li>
+      
+      </ol>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#100-mbit-s-vs-1-gbit-s-vs-10-gbit-s">100 Mbit&#x2F;s vs. 1 Gbit&#x2F;s vs. 10 Gbit&#x2F;s</a>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#uplink">Uplink</a>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#managed-vs-unmanaged-switches">Managed vs. Unmanaged Switches</a>
+    
+      <ol>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#unmanaged-switches">Unmanaged Switches</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#managed-switches">Managed Switches</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#nehm-ich-also-lieber-managed-switches">Nehm ich also lieber managed Switches?</a>
+        </li>
+      
+      </ol>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#ip-adresse">IP-Adresse</a>
+    
+      <ol>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#ip-adressen-bereiche">IP-Adressen Bereiche</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#netzmaske">Netzmaske</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#gateway">Gateway</a>
+        </li>
+      
+      </ol>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#dhcp-vs-non-dhcp">DHCP vs. non-DHCP</a>
+    
+      <ol>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#bei-dhcp-gilt-first-come-first-serve">Bei DHCP gilt: first Come first Serve!</a>
+        </li>
+      
+      </ol>
+    
+    </li>
+  
+    <li>
+      <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#router">Router</a>
+    
+      <ol>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#baut-euch-euren-eigenen-router-auch-virtuell">Baut euch euren eigenen Router, auch Virtuell!</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#traffic-shaping">Traffic Shaping</a>
+        </li>
+      
+        <li>
+          <a href="https:&#x2F;&#x2F;wiki.orgatalk.de&#x2F;wiki&#x2F;netzwerk&#x2F;#qos">QoS</a>
+        </li>
+      
+      </ol>
+    
+    </li>
+  
+  </ol>
+</details>
+
+
+<p>Das Netzwerk ist einer der Kernkomponenten einer LAN-Party.
+Umso wichtiger ist es, ein stabiles Netzwerk zu bieten, kleine Stolperfallen zu vermeiden und auch vor Fehlern der User gefeit zu sein.
+Die Anforderungen sind aber je nach Anzahl der Teilnehmer unterschiedlich.
+Hier sehen wir uns also mal eine Empfehlung an, die sich auf LAN-Partys bis 100 Leute gut umsetzen lässt.</p>
+<h2 id="der-backbone-und-die-richtige-topologie"><a class="zola-anchor" href="#der-backbone-und-die-richtige-topologie" aria-label="Anchor link for: der-backbone-und-die-richtige-topologie">🔗</a>Der Backbone und die &quot;richtige&quot; Topologie</h2>
+<p>Als &quot;Backbone&quot; bezeichnet man das zentrale Bindeglied des kompletten Netzwerks.
+Jeder User muss irgendwie mit jedem User kommunizieren können.
+Zu BNC-Zeiten war es ein Bus-System.
+Das bedeutet die Daten hatten ein Anfang und sind einen Weg entlang gefahren.
+Mit der Einführung von Switches hat man sich für ein Sternsystem entschieden.
+Machen wir es mal an folgendem Beispiel:</p>
+<p>Du hast vier Switche und drei Tischgruppen.
+Jede Tischgruppe möchtest du mit einem Switch ausstatten.
+Der optimale weg wäre also so, dass du Switch 1 in die &quot;Mitte&quot; stellt und jeweils ein Netzwerkkabel von Switch 1 an Switch 2, 3 und 4 anschließt, also eine Sterntopologie.
+Dieses Kabel nennt man dann auch &quot;Uplink&quot;, denn dieses sorgt dafür auch mit den anderen Switchen kommunizieren zu können.
+Jetzt könnte man noch auf die Idee kommen, einen Ring zu bauen, sprich Switch 1 → Switch 2, Switch 2 → Switch 3, Switch 3 → Switch 4, Switch 4 → Switch 1.
+Kann man machen, ist aber scheiße.
+Warum? Weil mehrere Uplinks für den Datentransfer genutzt werden müssen.
+Wir reden zwar im LAN über Millisekunden, trotzdem stresst es ungemein.</p>
+<p>Wir nehmen das Beispiel, dass ein User von Switch 2 mit Switch 4 sprechen möchte. Folgendes passiert:</p>
+<ul>
+<li>Switch 2 nutzt seinen Uplink zu Switch 3.</li>
+<li>Das Paket geht dann weiter über den Uplink zu Switch 4.</li>
+</ul>
+<p>Bedeutet also, wir haben zusätzlich noch den Uplink von Switch 3 belastet.
+Jetzt stellt euch mal vor, alle User würden das machen. Dann wären nicht nur die User an Switch 2 und Switch 4 in Leidenschaft, sondern auch an Switch 3.</p>
+<h3 id="doppelt-halt-besser-beim-uplink-nicht-unbedingt"><a class="zola-anchor" href="#doppelt-halt-besser-beim-uplink-nicht-unbedingt" aria-label="Anchor link for: doppelt-halt-besser-beim-uplink-nicht-unbedingt">🔗</a>Doppelt hält besser beim Uplink? Nicht unbedingt …</h3>
+<p>Man könnte jetzt auf die Idee kommen, zwei Uplinks von Switch 1 zu Switch 2 zu bauen.
+Baut man dieses bei einem &quot;dummen&quot; Layer-2-Switch, hat man erfolgreich einen Loop gebaut und hat gar kein funktionierendes Netzwerk mehr.</p>
+<h4 id="ein-loop"><a class="zola-anchor" href="#ein-loop" aria-label="Anchor link for: ein-loop">🔗</a>Ein Loop?</h4>
+<p>Richtig, der Tod eines jeden Netzwerk ist ein Loop.
+Dieses passiert z.B., wenn man ein Netzwerkkabel nimmt und beide Kabelenden an den selben Switch steckt, oder aber zwei Uplinks bauen möchte und keinen &quot;Trunk&quot; bauen kann.
+Macht man das, weiß der Switch nicht genau, an welchen der Ports er Pakete adressieren soll, weil er zwei Ziele zur selben Adresse hat.
+Was dazu führt, dass immer mehr Pakete verschickt werden, und somit zur Überlastung des Switches sowie Netzwerkes.</p>
+<h2 id="100-mbit-s-vs-1-gbit-s-vs-10-gbit-s"><a class="zola-anchor" href="#100-mbit-s-vs-1-gbit-s-vs-10-gbit-s" aria-label="Anchor link for: 100-mbit-s-vs-1-gbit-s-vs-10-gbit-s">🔗</a>100 Mbit/s vs. 1 Gbit/s vs. 10 Gbit/s</h2>
+<p>Es gab mal eine Zeit, da war 100 Mbit/s State of the Art.
+Diese Zeiten sind schon lange vorbei. Während 2,5 Gbit/s auf immer mehr Computern vorhanden ist, kann man zu 99% davon ausgehen, heute mit 1 Gbit/s am PC ausgestattet zu sein.
+Wer heute also Hardware kauft (wenn sowas überhaupt noch neu vorhanden ist), kauft wirklich veraltete Technik.
+Spiele generell brauchen nicht viel Datenvolumen, wir sprechen da im Bereich Kilobyte pro Sekunde. Trotzdem ist es von Vorteil einem User 1 Gbit/s anzubieten.</p>
+<ul>
+<li>Oftmals ist der Uplink das 10-fache der typischen Portgeschwindigkeit. Wenn man sich also einen Tisch mit 20 Usern vorstellt, müssten 20 User sich 1 Gbit/s zum Backbone teilen. Das kann ganz schön eng werden.</li>
+<li>Downloads von Patches, lokalen Steamcache usw. dauern im schlimmsten Fall 10-mal so lange, bedeutet 10-mal so lange Stress für den Uplink, was den User selbst und auch die anderen Spieler am Tisch stören kann.</li>
+</ul>
+<p>Dann gibt es noch 20 Gbit/s und 40 Gbit/s.
+Dieses sind Geschwindigkeiten, die nicht für den User bestimmt sind, sondern für den Uplink.</p>
+<h2 id="uplink"><a class="zola-anchor" href="#uplink" aria-label="Anchor link for: uplink">🔗</a>Uplink</h2>
+<p>Apropos Uplink: Von Vorteil ist es natürlich, einen Uplinkport zu haben, der eben eine höhere Geschwindigkeit hat als ein User, ansonsten ist ein einziger User in der Lage, die Kommunikation aller anderen Teilnehmer am Tisch ganz schön zu stressen.
+Das führt dann zu Datenstau, einen höheren Ping, Lags u.v.m.
+Also alles Sachen, die gerade bei schnellen Shootern alles andere als schön sind.</p>
+<h2 id="managed-vs-unmanaged-switches"><a class="zola-anchor" href="#managed-vs-unmanaged-switches" aria-label="Anchor link for: managed-vs-unmanaged-switches">🔗</a>Managed vs. Unmanaged Switches</h2>
+<h3 id="unmanaged-switches"><a class="zola-anchor" href="#unmanaged-switches" aria-label="Anchor link for: unmanaged-switches">🔗</a>Unmanaged Switches</h3>
+<p>Ein nicht managebarer Switch ist die einfachste Form eines Switches.
+Er macht einfach nur MAC-Address-Learning und leitet Pakete weiter.
+Man kann den Switch einfach aufbauen und hoffen, dass er immer das richtige tut und sich auch alle Geräte im Netzwerk anständig verhalten.
+Es gibt keinerlei Möglichkeiten, etwas zu konfigurieren oder zu überwachen.</p>
+<h3 id="managed-switches"><a class="zola-anchor" href="#managed-switches" aria-label="Anchor link for: managed-switches">🔗</a>Managed Switches</h3>
+<p>Managebare Switches bieten viele Möglichkeiten, den Datenverkehr zu beeinflussen oder zu überwachen.
+Dafür muss man das Gerät aber entsprechend konfigurieren.
+Das passiert i.d.R. über ein Web-Interface, einen Console-Port oder per SSH.</p>
+<p>Was das jeweilige Modell für Features unterstützt, steht im entsprechenden Datenblatt.
+Öfter mal gebrauchen kann man:</p>
+<ul>
+<li>VLAN Tagging</li>
+<li>DHCP Snooping</li>
+<li>LACP/Port-Channels/LAGs (jeder Hersteller hat sich mal irgendwann gedacht, das Feature anders nennen zu müssen)</li>
+<li>SNMP</li>
+<li>Spanning-Tree-Protokol (am bestern RSTP oder MST)</li>
+<li>Access Controll Lists</li>
+<li>IGMP/MLD Snooping</li>
+</ul>
+<h3 id="nehm-ich-also-lieber-managed-switches"><a class="zola-anchor" href="#nehm-ich-also-lieber-managed-switches" aria-label="Anchor link for: nehm-ich-also-lieber-managed-switches">🔗</a>Nehm ich also lieber managed Switches?</h3>
+<p>Das kann man so pauschal nicht sagen.
+Klar ist, dass eine typische Keller-LAN mit 5–10 Teilnehmern keine managed Switches braucht.
+Managebare Switches bieten einen ganzen Haufen Features, die in vielen Situationen nützlich sein können.
+Wer ein Netz aus unmanaged Switches betreibt, ist in vielen Fällen den Geräten im Netz hilflos ausgeliefert.
+Mit managed Switches kann man zum einen sich gegen Probleme wie Loops oder Rogue DHCP Server schützen
+und zum anderen genau herausfinden, an welchem Switchport ein gewisser Rechner hängt, wo der Loop gesteckt wurde,
+ob ein Port viele kaputte Pakete empfängt, usw.
+Falls man also die Wahl hat, möchte man sich für managebare Geräte entscheiden.
+Die sind auch auf dem Gebrauchtmarkt relativ erschwinglich. Ansonsten kann man
+einfach mal die freundliche LAN-Party in der Umgebung fragen, ob die einem
+Geräte leihen können, weil bei denen liegt die Technik i.d.R. auch die meiste
+Zeit vom Jahr im Keller.</p>
+<h2 id="ip-adresse"><a class="zola-anchor" href="#ip-adresse" aria-label="Anchor link for: ip-adresse">🔗</a>IP-Adresse</h2>
+<p>Die Computer im Netzwerk unterhalten sich über das IP-Protokoll.
+Sprich, jeder Teilnehmer bekommt für den eigenen PC eine IP-Adresse und kann dann so mit anderen Computern kommunizieren.</p>
+<h3 id="ip-adressen-bereiche"><a class="zola-anchor" href="#ip-adressen-bereiche" aria-label="Anchor link for: ip-adressen-bereiche">🔗</a>IP-Adressen Bereiche</h3>
+<p>Die Bereiche sind genau geregelt.
+So gibt es für interne Netzwerk drei IP-Bereiche, die man nutzen darf:</p>
+<ul>
+<li><code>10.0.0.0</code>–<code>10.255.255.255</code></li>
+<li><code>172.16.0.0</code>–<code>172.31.255.255</code></li>
+<li><code>192.168.0.0</code>–<code>192.168.255.255</code></li>
+</ul>
+<h3 id="netzmaske"><a class="zola-anchor" href="#netzmaske" aria-label="Anchor link for: netzmaske">🔗</a>Netzmaske</h3>
+<p>Die Subnetzmaske gibt an, wie groß das eigene Netzwerk ist. Jegliche Kommunikation außerhalb muss über ein Gateway erfolgen.
+Die Angabe einer Subnetzmaske kann dabei auf zwei Arten erfolgen:</p>
+<ul>
+<li><code>10.0.0.0/8</code></li>
+<li><code>10.0.0.0</code> mit der Netzmaske <code>255.0.0.0</code></li>
+</ul>
+<p>Im obengenannten Beispiel können jetzt 16.777.214 Computer eine IP-Adresse bekommen.
+Also ziemlich groß.
+Normale Heimrouter bieten meistens ein <code>192.168.0.0/24</code>-Netz an, in diesem gibt es dann 255 Adressen.
+In welcher Größe ihr euer Netzwerk haben wollt müsst ihr entscheiden, wählt ihr es zu klein könnte es euch passieren das nicht alle Clients eine IP-Adresse bekommen.</p>
+<h3 id="gateway"><a class="zola-anchor" href="#gateway" aria-label="Anchor link for: gateway">🔗</a>Gateway</h3>
+<p>Das ist die Adresse, die genutzt wird, um mit Netzen außerhalb eures Netzwerks zu kommunizieren.
+Im Heimfall z. B. dann euer Router.</p>
+<h2 id="dhcp-vs-non-dhcp"><a class="zola-anchor" href="#dhcp-vs-non-dhcp" aria-label="Anchor link for: dhcp-vs-non-dhcp">🔗</a>DHCP vs. non-DHCP</h2>
+<p>Um eine IP-Adresse zu erhalten gibt es zwei Wege:</p>
+<ul>
+<li>Der Teilnehmer selbst trägt sich eine IP-Adresse über seine Systemsteuerung ein</li>
+<li>Der Teilnehmer bekommt beim einstecken eine IP-Adresse zugewiesen</li>
+</ul>
+<p>Das automatische Zuweisen der IP-Adresse erfolgt über eine DHCP-Server.
+Ob man einen DHCP-Server einsetzt oder nicht muss jeder selbst entscheiden, da streiten sich vor allem die Geister darüber.
+Der Vorteil eines DHCP Server ist ganz klar: Der User selbst muss nichts einstellen, er stöpselst sich einfach an den Netzwerkport und kann loszocken.
+Doch gerade in einem sehr großen Netzwerk jemand mit höheren Netzwerkkenntnissen so einiges an Schabernack anrichten, gerade wenn &quot;nur&quot; Layer-2-Switches im Einsatz sind!</p>
+<h3 id="bei-dhcp-gilt-first-come-first-serve"><a class="zola-anchor" href="#bei-dhcp-gilt-first-come-first-serve" aria-label="Anchor link for: bei-dhcp-gilt-first-come-first-serve">🔗</a>Bei DHCP gilt: first Come first Serve!</h3>
+<p>Man muss sich das mit DHCP so vorstellen: Sobald ein Client sich antobest, brüllt er wie ein Affe: &quot;HEY, ICH BIN HIER NEU UND BRAUCHE EINE IP-ADRESSE! WER HAT EINE FÜR MICH?&quot;.
+Und die erste Antwort die er darauf bekommt akzeptiert er und bearbeitet sie.
+Genau dort liegt das Problem: Wenn sich in einem Netzwerk zwei DHCP-Server befinden kann dies übel enden, denn der zweite Server kann komplett andere Daten haben, somit können dann die Leute mit diesen zwei unterschiedlichen Netzen nicht miteinander kommunizieren.
+Bei einem Netzwerk mit Layer-3 Switchen kann dies unterbunden werden bzw.genau eingerichtet werden, welche IP-Adresse als DHCP-Server dienen darf.
+Wer jetzt aber aus dem Artikel herausliest gegen DHCP zu sein: Dem ist nicht so.
+Große sowie kleine LAN-Partys setzen auf DHCP-Server.
+Nur bei Layer-2 Netzwerken sollte man immer bereit sein mühselig den zu finden, der sich dachte auch IP-Adressen vergeben zu dürfen :)</p>
+<h2 id="router"><a class="zola-anchor" href="#router" aria-label="Anchor link for: router">🔗</a>Router</h2>
+<p>Die Kommunikation mit der Außenwelt (dieses Neuland namens Internet) sollte auch besser vorbereitet sein.
+Während eine Fritzbox ein Heimnetzwerk mit 10 - 20 Leuten noch so Meistern kann, würde es bei 100 Teilnehmern schon sehr eng werden.
+Von den fehlenden Konfigurationsmöglichkeiten mal abgesehen.</p>
+<h3 id="baut-euch-euren-eigenen-router-auch-virtuell"><a class="zola-anchor" href="#baut-euch-euren-eigenen-router-auch-virtuell" aria-label="Anchor link for: baut-euch-euren-eigenen-router-auch-virtuell">🔗</a>Baut euch euren eigenen Router, auch Virtuell!</h3>
+<p>Der beste Weg ist es sich, für die Veranstaltung seinen eigenen Router zu bauen, dieser kann auch virtuell sein! Alles, was man dafür braucht, sind mindestens zwei Netzwerkkarten (eine fürs LAN-Netzwerk und jeweils eine für das WAN-Netzwerk [also das Internet]).
+Folgende Lösungen bieten sich für sowas zum Beispiel an:</p>
+<ul>
+<li><a href="https://www.pfsense.org">pfSense</a></li>
+<li><a href="https://opnsense.org">OPNSense</a></li>
+<li><a href="https://www.ipfire.org">IPFire</a></li>
+<li><a href="https://www.sophos.com/de-de/products/free-tools/sophos-xg-firewall-home-edition.aspx">Sophos XG</a></li>
+</ul>
+<h3 id="traffic-shaping"><a class="zola-anchor" href="#traffic-shaping" aria-label="Anchor link for: traffic-shaping">🔗</a>Traffic Shaping</h3>
+<p>Um was man nicht herumkommt ab einer gewissen Größe ist es, den einzelnen Nutzer dahingehend zu regulieren, wie viel Bandbreite er abbekommt.
+Fakt ist nun mal, die Verbindung ins Internet ist begrenzt und zwar stärker als im LAN.
+Ohne Beschränkungen wäre es also von einem User schon möglich mit einem etwas größeren Download die komplette Internetleitung zu blockieren und der gesamten LAN das Interneterlebnis vermiesen.
+Deshalb ist es wichtig zu sagen: Ein einziger User bekommt nur eine gewisse Bandbreite, da reichen selbst 128 kbit/s pro User.
+Wem das wenig vorkommt: Die meisten Spiele begnügen sich bereits mit ~ 50 kbit/s.</p>
+<h3 id="qos"><a class="zola-anchor" href="#qos" aria-label="Anchor link for: qos">🔗</a>QoS</h3>
+<p>Ein weiterer Punkt der einem das Leben erleichtern kann mit der Außenwelt ist Quality of Service (QoS).
+Damit kann man festlegen welche Datenpakete eine höhere Priorität haben.
+QoS wird selbst im Heimrouter betrieben, jeder gängige Router weis, dass z. B. Datenpakete aus der Telefonie zeitkritisch und damit wichtiger sind als z. B. aus Aufrufen einer Website.
+Das ist auch einer der Gründe für Lags, wenn man einen großen Download hat.
+Ein Großteil des Datenverkehrs erfolgt über das TCP-Protokoll, dass bei einem gesendeten Paket auf eine Bestätigung wartet.
+Im Beispiel eines großen Downloads ist es sehr oft so das auch der Upload komplett ausgelastet ist.
+Dies bedeutet dass das &quot;ACK&quot;-Paket, dass die Bestätigung für den richtigen Empfang des TCP-Paket ist, viel später ankommt, was zu einem höheren Ping und auch Lags führt.</p>
+
+
+
+        </div>
+      </main>
+
+      <section class="page-footer">
+        <footer class="container footer">
+          <div class="row row--space-between">
+
+            <div class="column-auto" style="text-align: left;">
+              <p class="footer-slogan">Von Orgas. <span class="footer-slogan-icon"><svg class="icon"><use xlink:href="/style/icons.svg#recycle"></use></svg></span> Für Orgas.</p>
+              <small>
+                <p>
+                  2021
+                  &middot;
+                  Ein <a href="https://www.orgatalk.de/">OrgaTalk</a>-Projekt
+                  &middot;
+                  <a href="https://www.orgatalk.de/imprint">Impressum</a>
+                </p>
+                <p>
+                  <a href="https://github.com/orgatalk/wiki">Inhalt auf GitHub</a>
+                  &middot;
+                  Gebaut mit <a href="https://www.getzola.org/">Zola</a>
+                </p>
+              </small>
+            </div>
+
+          </div>
+        </footer>
+      </section>
+
+    </div>
+
+  </body>
+</html>
